@@ -71,20 +71,22 @@ pre {
     </style>
     <script src="https://kit.fontawesome.com/a232a4c6d6.js" crossorigin="anonymous"></script>
 </head>
-<title>Add Account</title>
+<title>Deposit</title>
 
 <body>
     <div class="navbar">
 
-        <pre> <i class="fas fa-home"></i>    Add Account</pre>
+        <pre> <i class="fas fa-home"></i>    Deposit</pre>
     </div>
     <div class="border-box">
         <form action="bank" method="post">
-          <input type="hidden" name="link" value="submitAccount">
+          <input type="hidden" name="link" value="submitDeposit">
             <label for="fname" class="form1">Customer Id:</label><br><br>
-            <input type="text" id="fname" class="form input" name="fname"><br><br>
-            <label for="lname" class="form1">Balance:</label><br><br>
-            <input type="text" id="lname" class="form input" name="lname"><br><br>
+            <input type="text" id="fname" class="form input" name="customerId"><br><br>
+            <label for="lname" class="form1">Account Id:</label><br><br>
+            <input type="text" id="lname" class="form input" name="accountId"><br><br>
+            <label for="lname" class="form1">Deposit amount:</label><br><br>
+            <input type="text" id="lname" class="form input" name="amount"><br><br>
             <input type="submit" class="form add" value="Submit">
         </form>
     </div>

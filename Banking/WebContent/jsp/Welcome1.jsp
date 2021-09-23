@@ -33,8 +33,8 @@ body {
   outline: none;
   color: black;
   padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
+  background-color: blue;
+  font-family: red;
   margin: 0;
 }
 

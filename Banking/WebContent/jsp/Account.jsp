@@ -61,7 +61,8 @@ pre {
 <title>Accounts</title>
 
 <body>
-   <form action="/bank" method="post">
+   <form action="bank" method="post">
+   <input type="hidden" name="link" value="DeleteAccounts">
     <div class="navbar">
 
         <pre> <i class="fas fa-home"></i>     Accounts</pre>
@@ -69,11 +70,14 @@ pre {
     <div class="cust-body">
         <a href="bank?link=AddAccounts">
         <input type="button" value="Add" class="add"></a>
-        <input type="button" value="Delete" class="add">
+      
+        <input type="submit" value="Delete" class="add">
+        
     </div>
     <table  id="table1" BORDER=2 CELLPADDING=20 CELLSPACING=20>
     <thead>
     <tr>
+        <th>check</th>
         <th>CustomerId</th>
         <th>AccountId</th>
         <th>Balance</th>
@@ -82,6 +86,7 @@ pre {
     </thead>
     <c:forEach items="${accountList}" var="account">
         <tr>
+            <td><input type="checkbox" name="selectedAccounts" value="${account.customer_id},${account.account_id}"></td>
             <td><c:out value="${account.customer_id}" /></td>
             <td><c:out value="${account.account_id}" /></td>
             <td><c:out value="${account.balance}" /></td>
